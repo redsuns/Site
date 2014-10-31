@@ -31,9 +31,6 @@
     },
     "minimum-stability" : "dev",
     "autoload": {
-        "psr-0": {
-            "Site\\": "src/"
-        },
         "classmap": [
             "./Module.php"
         ]
