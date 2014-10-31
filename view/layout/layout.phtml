@@ -40,4 +40,24 @@ echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/
         <?php echo $this->content; ?>
 
     </body>
+    
+    <?php
+    $analyticsCode = 'UA-XXXXX-X';
+    $analyticsConfig = include dirname(dirname(dirname(dirname(dirname(__DIR__))))) .
+            '/config/autoload/google-analytics.php';
+
+    if (isset($analyticsConfig['analytics_code']) && !empty($analyticsConfig['analytics_code'])) {
+        $analyticsCode = '\'' . $analyticsConfig['analytics_code'] . '\'';
+    }
+    ?>
+
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create',<?php echo $analyticsCode; ?>);ga('send','pageview');
+    </script>
+    
 </html>
