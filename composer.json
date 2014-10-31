@@ -2,11 +2,12 @@
     "name": "redsuns/site",
     "description": "Site Application for ZF2",
     "license": "BSD-3-Clause",
+    "type": "library",
     "keywords": [
         "framework",
         "zf2"
     ],
-    "author": [
+    "authors": [
         {
             "name": "Fabio de Souza Mendes",
             "email": "fbiosm@gmail.com",
@@ -30,8 +31,11 @@
     },
     "minimum-stability" : "dev",
     "autoload": {
-        "psr-0": [
-            "Site\\", "/"
+        "psr-0": {
+            "Site\\": "src/"
+        },
+        "classmap": [
+            "./Module.php"
         ]
     }
 }
