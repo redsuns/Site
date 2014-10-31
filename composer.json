@@ -1,0 +1,32 @@
+{
+    "name": "redsuns/site",
+    "description": "Site Application for ZF2",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "author": [
+        {
+            "name": "Fabio de Souza Mendes",
+            "email": "fbiosm@gmail.com",
+            "role": "owner"
+        },
+        {
+            "name": "Reduns Tecnologia e Design",
+            "email": "contato@redsuns.com.br",
+            "role": "maintainter"
+        },
+        {
+            "name": "Andre Cardoso",
+            "email": "andrecardosodev@gmail.com",
+            "role": "contributor"
+        }
+    ],
+    "homepage": "https://github.com/redsuns/site",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    },
+    "minimum-stability" : "dev"   
+}
