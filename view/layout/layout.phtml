@@ -43,11 +43,12 @@ echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/
     
     <?php
     $analyticsCode = 'UA-XXXXX-X';
-    $analyticsConfig = include dirname(dirname(dirname(dirname(dirname(__DIR__))))) .
-            '/config/autoload/google-analytics.php';
-
-    if (isset($analyticsConfig['analytics_code']) && !empty($analyticsConfig['analytics_code'])) {
-        $analyticsCode = '\'' . $analyticsConfig['analytics_code'] . '\'';
+    $analyticsConfig = dirname(dirname(dirname(dirname(dirname(__DIR__))))) . '/config/autoload/google-analytics.php';
+    
+    if( file_exists($analyticsConfig) ) {
+        if (isset($analyticsConfig['analytics_code']) && !empty($analyticsConfig['analytics_code'])) {
+            $analyticsCode = '\'' . $analyticsConfig['analytics_code'] . '\'';
+        }
     }
     ?>
 

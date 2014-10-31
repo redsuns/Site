@@ -15,6 +15,26 @@ Um módulo para Zend Framework para facilitar o carregamento de elementos básic
 
 ##Como utilizar (descrito por funcionalidades)
 
+###Carregamento do módulo
+
+Em seu arquivo `config/application.config.php` adicione o nome do módulo:
+```php
+<?php 
+return array(
+    'modules' => array(
+        // ...        
+        'Site'
+        // ...  
+    ),
+    'module_listener_options' => array(
+        'module_paths' => array(
+            // ...  
+            './vendor'
+        ),
+    )
+);
+```
+
 ###Google analytics
 
 Crie em `config/autoload` um arquivo chamado `google-analytics.php` com o seguinte conteúdo:
