@@ -28,10 +28,5 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*"
     },
-    "minimum-stability" : "dev",
-    "autoload": {
-        "psr-0": [
-            "Site\\", "src/Site"
-        ]
-    }
+    "minimum-stability" : "dev"   
 }
